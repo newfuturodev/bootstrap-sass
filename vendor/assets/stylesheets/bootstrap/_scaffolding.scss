@@ -1,29 +1,31 @@
-// Scaffolding
-// Basic and global styles for generating a grid system, structural layout, and page templates
-// -------------------------------------------------------------------------------------------
+#nf_bootstrap{
+  // Scaffolding
+  // Basic and global styles for generating a grid system, structural layout, and page templates
+  // -------------------------------------------------------------------------------------------
 
 
-// Body reset
-// -----------------
+  // Body reset
+  // -----------------
 
-body {
-  margin: 0;
-  font-family: $baseFontFamily;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  color: $textColor;
-  background-color: $bodyBackground;
-}
+  body {
+    margin: 0;
+    font-family: $baseFontFamily;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    color: $textColor;
+    background-color: $bodyBackground;
+  }
 
 
-// Links
-// -----
+  // Links
+  // -----
 
-a {
-  color: $linkColor;
-  text-decoration: none;
-}
-a:hover {
-  color: $linkColorHover;
-  text-decoration: underline;
+  a {
+    color: $linkColor;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $linkColorHover;
+    text-decoration: underline;
+  }
 }
