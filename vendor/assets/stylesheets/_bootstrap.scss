@@ -26,9 +26,7 @@
 @import "bootstrap/tables";
 
 // Components: common
-@import "bootstrap/sprites";
 @import "bootstrap/dropdowns";
-@import "bootstrap/wells";
 @import "bootstrap/component-animations";
 @import "bootstrap/close";
 
@@ -39,18 +37,12 @@
 // Components: Nav
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
-@import "bootstrap/pagination";
-@import "bootstrap/pager";
 
 // Components: Popovers
 @import "bootstrap/modals";
-@import "bootstrap/tooltip";
-@import "bootstrap/popovers";
 
 // Components: Misc
 @import "bootstrap/thumbnails";
-@import "bootstrap/labels-badges";
-@import "bootstrap/progress-bars";
 @import "bootstrap/hero-unit";
 
 // Utility classes
