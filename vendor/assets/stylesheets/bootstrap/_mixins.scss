@@ -623,3 +623,6 @@
   margin-left: $gutterWidth;
   @include gridFluidSpan($columns, $columnWidth, $gutterWidth);
 }
+
+@mixin getSpanSize($size: 1px, $extra: 0px)
+  width: (($gridRowWidth)/(12/$size)) + $extra
