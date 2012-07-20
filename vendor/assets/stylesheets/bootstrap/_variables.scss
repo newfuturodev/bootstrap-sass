@@ -17,15 +17,16 @@ $grayLight:             #999 !default;
 $grayLighter:           #eee !default;
 $white:                 #fff !default;
 
-
 // Accent colors
 // ----------------------------
-$blue:                  #049cdb !default;
-$blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
+$blueLight:             #B8E4FA !default;
+$blue:                  #1EB53A !default;
+$blueDark:              #0064B4 !default;
+
+$green:                 #1EB53A !default;
 $red:                   #9d261d !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
+$yellow:                #FFC61E !default;
+$orange:                #F48120 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
 
@@ -41,7 +42,7 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$sansFontFamily:        Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
