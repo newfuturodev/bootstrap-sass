@@ -623,3 +623,7 @@
   margin-left: $gutterWidth;
   @include gridFluidSpan($columns, $columnWidth, $gutterWidth);
 }
+
+@mixin getSpanSizeWithExtra($size: 1, $extra: 0px, $property: width) {
+  #{$property}: (($gridColumnWidth * $size) + ($gridGutterWidth * ($size - 1))) + $extra;
+}
