@@ -29,7 +29,7 @@ $yellow:                #FFC61E !default;
 $orange:                #f89829 !default;
 $pink:                  #f26649 !default;
 $purple:                #7a43b6 !default;
-$salmon:                #7a43b6 !default;
+$salmon:                #f26649 !default;
 
 // Scaffolding
 // -------------------------
@@ -38,16 +38,16 @@ $textColor:             $grayDark !default;
 
 // Links
 // -------------------------
-$linkColor:             #08c !default;
+$linkColor:             $blue !default;
 $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$sansFontFamily:        Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$sansFontFamily:        EmbarcaderoMVBRegRegular, Arial, sans-serif !default;
+$serifFontFamily:       Helvetica, serif !default;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          13px !default;
+$baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        18px !default;
 $altFontFamily:         $serifFontFamily !default;
