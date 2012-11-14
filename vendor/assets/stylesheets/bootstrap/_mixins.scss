@@ -515,7 +515,7 @@
 @mixin container-fixed() {
   margin-right: auto;
   margin-left: auto;
-  @include cqlearfix();
+  @include clearfix();
 }
 
 // Table columns
