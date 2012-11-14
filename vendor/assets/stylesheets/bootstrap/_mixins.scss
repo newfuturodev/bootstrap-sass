@@ -627,3 +627,245 @@
 @mixin getSpanSizeWithExtra($size: 1, $extra: 0px, $property: width) {
   #{$property}: (($gridColumnWidth * $size) + ($gridGutterWidth * ($size - 1))) + $extra;
 }
+
+//NF Develop Mixins
+
+@mixin full_outter_width {
+  display: block;
+  position: relative !important;
+  height: auto !important;
+  bottom: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important; }
+
+@mixin interest_button($color, $border: none) {
+  float: left;
+  background: $color;
+  @include font_builder($font: $headingsFontFamily, $size: 15px, $weight: $headingsFontWeight, $color: white, $transform: uppercase);
+  @include border_radius(4px);
+  border: $border;
+  height: 33px;
+  width: 127px; }
+
+@mixin font_builder($font: Helvetica, $size: 14px, $weight: normal, $transform: none, $color: $black, $style: style, $line: -1px) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
+  color: $color;
+  letter-spacing: $line; }
+
+@mixin img_replace($url, $width, $height) {
+  display: block;
+  background: url($url);
+  width: $width;
+  height: $height;
+  text-indent: -9999px; }
+
+@mixin circle($dimensions: 37px, $border: 50px, $line_height: 38px, $background_color: $menu_item_box_gray) {
+  width: $dimensions !important;
+  height: $dimensions !important;
+  display: block;
+  border-radius: $border !important;
+  -moz-border-radius: $border !important;
+  -webkit-border-radius: $border !important;
+  -khtml-border-radius: $border !important;
+  line-height: $line_height;
+  text-align: center;
+  background: $background_color; }
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  display: inline-block; }
+
+@mixin horizontal_ul {
+  li {
+    float: left;
+    list-style-type: none; } }
+
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius; }
+
+@mixin border_radius_bottom($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius; }
+
+@mixin border_radius_bottom_left($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius; }
+
+@mixin border_radius_left($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius; }
+
+@mixin border_radius_right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius; }
+
+@mixin border_radius_top_right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius; }
+
+@mixin border_radius_top_left($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius; }
+
+@mixin border_radius_top($radius) {
+  @include border_radius_top_left($radius);
+  @include border_radius_top_right($radius); }
+
+@mixin border_radius_bottom_right($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius; }
+
+@mixin linear_gradient($first_color, $second_color) {
+  background-color: $first_color;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($first_color), to($second_color));
+  background-image: -webkit-linear-gradient(top, $first_color, $second_color);
+  background-image: -moz-linear-gradient(top, $first_color, $second_color);
+  background-image: -ms-linear-gradient(top, $first_color, $second_color);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=$first_color, endColorstr=$second_color);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=" + $first_color + ", endColorstr=" + $second_color + ")";
+  background-image: -o-linear-gradient(top, $first_color, $second_color);
+  background-image: linear-gradient(top, $first_color, $second_color); }
+
+@mixin shadow($color: rgba(46, 50, 50, 0.75), $length: 24px, $position: 3px) {
+  -webkit-box-shadow: 0px $position $length $color;
+  -moz-box-shadow: 0px $position $length $color;
+  box-shadow: 0px $position $length $color; }
+
+@mixin shadow_tooltip($color: $light_gray, $length: 10px) {
+  -webkit-box-shadow: 0px 0px $length $color;
+  -moz-box-shadow: 0px 0px $length $color;
+  box-shadow: 0px 0px $length $color; }
+
+@mixin arrow_down($color, $size: 5px) {
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color; }
+
+@mixin arrow_right($color, $size, $left) {
+  width: 0;
+  height: 0;
+  border-left: $left solid $color;
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent; }
+
+@mixin sign_up_tabs_arrow($before_color, $after_color, $before_pos, $after_pos, $arrow_size_extra) {
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 0; }
+  &:before {
+    top: 0px;
+    @include getSpanSizeWithExtra($size: 2, $extra: $arrow_size_extra, $property: left);
+    @include arrow_right($before_color, $before_pos, 10px); }
+  &:after {
+    top: 2px;
+    @include getSpanSizeWithExtra($size: 2, $extra: $arrow_size_extra, $property: left);
+    @include arrow_right($after_color, $after_pos, 9px); } }
+
+@mixin opacity($value: 1) {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=($value * 100));
+  -moz-opacity: $value;
+  opacity: $value; }
+
+@mixin rounded_box {
+  display: inline-block;
+  @include border_radius(6px);
+  background: $grayLighter;
+  border: 1px solid $grayLight;
+  behavior: url(PIE.htc); }
+
+@mixin adjusted_image($size) {
+  width: $size;
+  height: $size;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  img {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 0;
+    min-height: 100%; } }
+
+@mixin main_tabs_properties($image, $padding, $en_width, $es_width, $not_selected_back_pos, $selected_back_pos, $en_left_selected_position: 0px, $es_left_selected_position: 0px, $color: $grayLight) {
+  a {
+    padding-left: $padding; }
+  &.en {
+    width: $en_width;
+    background: {
+      image: $image;
+      repeat: no-repeat;
+      position: $en_left_selected_position $not_selected_back_pos; }; }
+  &.es {
+    width: $es_width;
+    background: {
+      image: $image;
+      repeat: no-repeat;
+      position: $es_left_selected_position $not_selected_back_pos; }; }
+  &.ui-tabs-selected, &:hover {
+    a {
+      background: {
+        position: 0px $selected_back_pos; };
+      h3 {
+        color: $gray; } }
+    &.en {
+      width: $en_width;
+      background: {
+        image: $image;
+        repeat: no-repeat;
+        position: $en_left_selected_position $selected_back_pos; }; }
+    &.es {
+      width: $es_width;
+      background: {
+        image: $image;
+        repeat: no-repeat;
+        position: $es_left_selected_position $selected_back_pos; }; } }
+  &.ui-tabs-selected {
+    border-top: 3px solid $color; } }
+
+@mixin locale_width($en, $es) {
+  &.en {
+    width: $en; }
+  &.es {
+    width: $es; } }
+
+@mixin main_tabs_properties_rtc($image, $color) {
+  width: 200px;
+  background: {
+    image: $image;
+    repeat: no-repeat; };
+  &.ui-tabs-selected, &:hover {
+    background-position: -15px 9px;
+    top: 1px; }
+  &.ui-tabs-selected {
+    border-top: 3px solid $color; } }
+
+@mixin step_style($image) {
+  background: url($image);
+  background-repeat: no-repeat;
+  background-position: center; }
