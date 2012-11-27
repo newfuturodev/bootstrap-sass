@@ -803,17 +803,23 @@
     margin: 0;
     min-height: 100%; } }
 
-@mixin main_tabs_properties($image, $color: $grayLight)
-  width: 130px
-  a
-    background:
-      image: $image
-      repeat: no-repeat
-  &.ui-tabs-selected, &:hover
-    a
-      background-position: -8px 10px
-  &.ui-tabs-selected
-    border-top: 3px solid $color
+@mixin main_tabs_properties($image, $color: $grayLight) {
+  width: 130px;
+  a {
+    background: {
+      image: $image;
+      repeat: no-repeat;
+    };
+  }
+  &.ui-tabs-selected, &:hover {
+    a {
+      background-position: -8px 10px;
+    }
+  }
+  &.ui-tabs-selected {
+    border-top: 3px solid $color;
+  }
+}
 
 @mixin locale_width($en, $es) {
   &.en {
