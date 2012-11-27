@@ -803,41 +803,17 @@
     margin: 0;
     min-height: 100%; } }
 
-@mixin main_tabs_properties($image, $padding, $en_width, $es_width, $not_selected_back_pos, $selected_back_pos, $en_left_selected_position: 0px, $es_left_selected_position: 0px, $color: $grayLight) {
-  a {
-    padding-left: $padding; }
-  &.en {
-    width: $en_width;
-    background: {
-      image: $image;
-      repeat: no-repeat;
-      position: $en_left_selected_position $not_selected_back_pos; }; }
-  &.es {
-    width: $es_width;
-    background: {
-      image: $image;
-      repeat: no-repeat;
-      position: $es_left_selected_position $not_selected_back_pos; }; }
-  &.ui-tabs-selected, &:hover {
-    a {
-      background: {
-        position: 0px $selected_back_pos; };
-      h3 {
-        color: $gray; } }
-    &.en {
-      width: $en_width;
-      background: {
-        image: $image;
-        repeat: no-repeat;
-        position: $en_left_selected_position $selected_back_pos; }; }
-    &.es {
-      width: $es_width;
-      background: {
-        image: $image;
-        repeat: no-repeat;
-        position: $es_left_selected_position $selected_back_pos; }; } }
-  &.ui-tabs-selected {
-    border-top: 3px solid $color; } }
+@mixin main_tabs_properties($image, $color: $grayLight)
+  width: 130px
+  a
+    background:
+      image: $image
+      repeat: no-repeat
+  &.ui-tabs-selected, &:hover
+    a
+      background-position: -8px 10px
+  &.ui-tabs-selected
+    border-top: 3px solid $color
 
 @mixin locale_width($en, $es) {
   &.en {
