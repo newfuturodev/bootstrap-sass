@@ -630,24 +630,6 @@
 
 //NF Develop Mixins
 
-@mixin full_outter_width {
-  display: block;
-  position: relative !important;
-  height: auto !important;
-  bottom: 0 !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important; }
-
-@mixin interest_button($color, $border: none) {
-  float: left;
-  background: $color;
-  @include font_builder($font: $headingsFontFamily, $size: 15px, $weight: $headingsFontWeight, $color: white, $transform: uppercase);
-  @include border_radius(4px);
-  border: $border;
-  height: 33px;
-  width: 127px; }
-
 @mixin font_builder($font: Helvetica, $size: 14px, $weight: normal, $transform: none, $color: $black, $style: style, $line: -1px) {
   font-family: $font;
   font-size: $size;
@@ -762,22 +744,6 @@
   border-top: $size solid transparent;
   border-bottom: $size solid transparent; }
 
-@mixin sign_up_tabs_arrow($before_color, $after_color, $before_pos, $after_pos, $arrow_size_extra) {
-  &:before, &:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 0;
-    height: 0; }
-  &:before {
-    top: 0px;
-    @include getSpanSizeWithExtra($size: 2, $extra: $arrow_size_extra, $property: left);
-    @include arrow_right($before_color, $before_pos, 10px); }
-  &:after {
-    top: 2px;
-    @include getSpanSizeWithExtra($size: 2, $extra: $arrow_size_extra, $property: left);
-    @include arrow_right($after_color, $after_pos, 9px); } }
-
 @mixin opacity($value: 1) {
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=($value * 100));
   -moz-opacity: $value;
@@ -803,42 +769,3 @@
     margin: 0;
     min-height: 100%; } }
 
-@mixin main_tabs_properties($image, $color: $grayLight) {
-  width: 130px;
-  a {
-    background: {
-      image: $image;
-      repeat: no-repeat;
-    };
-  }
-  &.ui-tabs-selected, &:hover {
-    a {
-      background-position: -8px 10px;
-    }
-  }
-  &.ui-tabs-selected {
-    border-top: 3px solid $color;
-  }
-}
-
-@mixin locale_width($en, $es) {
-  &.en {
-    width: $en; }
-  &.es {
-    width: $es; } }
-
-@mixin main_tabs_properties_rtc($image, $color) {
-  width: 200px;
-  background: {
-    image: $image;
-    repeat: no-repeat; };
-  &.ui-tabs-selected, &:hover {
-    background-position: -15px 9px;
-    top: 1px; }
-  &.ui-tabs-selected {
-    border-top: 3px solid $color; } }
-
-@mixin step_style($image) {
-  background: url($image);
-  background-repeat: no-repeat;
-  background-position: center; }
