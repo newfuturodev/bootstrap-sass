@@ -754,7 +754,7 @@
   @include border_radius(6px);
   background: $grayLighter;
   border: 1px solid $grayLight;
-  behavior: url(PIE.htc); }
+ }
 
 @mixin adjusted_image($size) {
   width: $size;
