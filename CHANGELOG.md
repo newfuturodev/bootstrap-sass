@@ -1,5 +1,8 @@
 # Changelog
 
+##2.1.6
+* Adding CreteItalic Font
+
 ## 2.0.4.0
 * Updated to Bootstrap 2.0.4
 * Switched to Bootstrap 2.0.3+'s method of separating responsive files
