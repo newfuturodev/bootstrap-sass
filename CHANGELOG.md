@@ -1,4 +1,6 @@
 # Changelog
+##2.1.7
+* Adding updated components 
 
 ##2.1.6
 * Adding CreteItalic Font
