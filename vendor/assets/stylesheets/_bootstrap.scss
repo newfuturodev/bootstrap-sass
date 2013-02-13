@@ -26,11 +26,13 @@
 @import "bootstrap/tables";
 
 // Components: common
+@import "bootstrap/sprites";
 @import "bootstrap/dropdowns";
 @import "bootstrap/component-animations";
 @import "bootstrap/close";
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
+@import "bootstrap/wells";
 
 // Components: Buttons & Alerts
 @import "bootstrap/buttons";
@@ -46,6 +48,7 @@
 // Components: Misc
 @import "bootstrap/thumbnails";
 @import "bootstrap/hero-unit";
+@import "bootstrap/accordion";
 
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
